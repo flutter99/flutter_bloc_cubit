@@ -1,3 +1,5 @@
+import 'package:bloc_practice/bloc/counter_bloc.dart';
+import 'package:bloc_practice/counter_page.dart';
 import 'package:bloc_practice/cubit/counter_cubit.dart';
 import 'package:bloc_practice/cubit/text_change_cubit.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +25,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (BuildContext context) => TextChangeCubit(),
         ),
+        BlocProvider(
+          create: (BuildContext context) => CounterBloc(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -30,7 +35,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const MyHomePage(),
+        home: const CounterPage(),
       ),
     );
   }
