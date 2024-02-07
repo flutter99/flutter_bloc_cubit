@@ -1,5 +1,5 @@
 import 'package:bloc_practice/models/single_post_model.dart';
-import 'package:bloc_practice/services/api_service.dart';
+import 'package:bloc_practice/services/single_post_service.dart';
 import 'package:flutter/material.dart';
 
 class SinglePostPage extends StatefulWidget {
@@ -10,7 +10,7 @@ class SinglePostPage extends StatefulWidget {
 }
 
 class _SinglePostPageState extends State<SinglePostPage> {
-  APIService apiService = APIService();
+  SinglePostService apiService = SinglePostService();
   SinglePostModel singlePostModel = SinglePostModel();
   dynamic singlePost;
   bool isLoading = true;

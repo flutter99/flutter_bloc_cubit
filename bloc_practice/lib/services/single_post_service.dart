@@ -3,7 +3,7 @@ import 'dart:convert';
 import '../models/single_post_model.dart';
 import 'package:http/http.dart' as http;
 
-class APIService {
+class SinglePostService {
   /// get single post with model
   Future<SinglePostModel?> getSinglePostWithModel() async {
     try {
