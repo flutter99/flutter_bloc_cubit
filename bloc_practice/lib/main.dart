@@ -3,6 +3,7 @@
 // import 'package:bloc_practice/cubit/counter_cubit.dart';
 // import 'package:bloc_practice/cubit/text_change_cubit.dart';
 import 'package:bloc_practice/screens/multi_data_page.dart';
+import 'package:bloc_practice/screens/posts_page.dart';
 import 'package:bloc_practice/screens/single_post_page.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const SinglePostPage(),
+      //home: const SinglePostPage(),
+      home: const PostsPage(),
     );
   }
 }
