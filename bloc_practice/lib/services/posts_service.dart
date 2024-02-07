@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:bloc_practice/models/post_with_id_model.dart';
+
 import '../models/get_posts_model.dart';
 import 'package:http/http.dart' as http;
 
@@ -26,19 +28,20 @@ class PostsService {
   }
 
   /// get posts id with model
-  Future<List<PostsModel>?> getPostsWithIdModel({required int postId}) async {
+  Future<List<PostsWithIdModel>?> getPostsWithIdModel(
+      {required int postId}) async {
     try {
       Uri url = Uri.parse(
           'https://jsonplaceholder.typicode.com/comments?postId=$postId');
       http.Response response = await http.get(url);
 
       if (response.statusCode == 200) {
-        List<PostsModel> postsModel = List<PostsModel>.from(
+        List<PostsWithIdModel> postsIdModel = List<PostsWithIdModel>.from(
           json.decode(response.body).map(
-                (e) => PostsModel.fromJson(e),
+                (e) => PostsWithIdModel.fromJson(e),
               ),
         );
-        return postsModel;
+        return postsIdModel;
       }
     } catch (e) {
       print(e);
