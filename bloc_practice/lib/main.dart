@@ -3,6 +3,7 @@
 // import 'package:bloc_practice/cubit/counter_cubit.dart';
 // import 'package:bloc_practice/cubit/text_change_cubit.dart';
 import 'package:bloc_practice/screens/books_page.dart';
+import 'package:bloc_practice/screens/epub_book_page.dart';
 import 'package:bloc_practice/screens/multi_data_page.dart';
 import 'package:bloc_practice/screens/posts_page.dart';
 import 'package:bloc_practice/screens/posts_with_id_page.dart';
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
       //home: const SinglePostPage(),
       //home: const PostsPage(),
       // home: const PostsWithIdPage(),
-      home: const BooksPage(),
+      //home: const BooksPage(),
+      home: EpubReaderPage(),
     );
   }
 }
